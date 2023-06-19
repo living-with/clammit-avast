@@ -170,7 +170,7 @@ func main() {
 	ctx.ApplicationURL = checkURL(ctx.Config.App.ApplicationURL)
 	checkURL(ctx.Config.App.ClamdURL)
 
-	ctx.Scanner = new(scanner.Clamav)
+	ctx.Scanner = new(scanner.Avast)
 	ctx.Scanner.SetLogger(ctx.Logger, ctx.Config.App.Debug)
 	ctx.Scanner.SetAddress(ctx.Config.App.ClamdURL)
 
